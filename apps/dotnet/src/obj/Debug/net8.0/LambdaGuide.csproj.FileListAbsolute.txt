@@ -1,0 +1,14 @@
+/Users/yeongseonchoe/GitHub/aws-lambda-practical-guide/apps/dotnet/src/bin/Debug/net8.0/LambdaGuide.deps.json
+/Users/yeongseonchoe/GitHub/aws-lambda-practical-guide/apps/dotnet/src/bin/Debug/net8.0/LambdaGuide.runtimeconfig.json
+/Users/yeongseonchoe/GitHub/aws-lambda-practical-guide/apps/dotnet/src/bin/Debug/net8.0/LambdaGuide.dll
+/Users/yeongseonchoe/GitHub/aws-lambda-practical-guide/apps/dotnet/src/bin/Debug/net8.0/LambdaGuide.pdb
+/Users/yeongseonchoe/GitHub/aws-lambda-practical-guide/apps/dotnet/src/obj/Debug/net8.0/LambdaGuide.csproj.AssemblyReference.cache
+/Users/yeongseonchoe/GitHub/aws-lambda-practical-guide/apps/dotnet/src/obj/Debug/net8.0/LambdaGuide.GeneratedMSBuildEditorConfig.editorconfig
+/Users/yeongseonchoe/GitHub/aws-lambda-practical-guide/apps/dotnet/src/obj/Debug/net8.0/LambdaGuide.AssemblyInfoInputs.cache
+/Users/yeongseonchoe/GitHub/aws-lambda-practical-guide/apps/dotnet/src/obj/Debug/net8.0/LambdaGuide.AssemblyInfo.cs
+/Users/yeongseonchoe/GitHub/aws-lambda-practical-guide/apps/dotnet/src/obj/Debug/net8.0/LambdaGuide.csproj.CoreCompileInputs.cache
+/Users/yeongseonchoe/GitHub/aws-lambda-practical-guide/apps/dotnet/src/obj/Debug/net8.0/LambdaGuide.dll
+/Users/yeongseonchoe/GitHub/aws-lambda-practical-guide/apps/dotnet/src/obj/Debug/net8.0/refint/LambdaGuide.dll
+/Users/yeongseonchoe/GitHub/aws-lambda-practical-guide/apps/dotnet/src/obj/Debug/net8.0/LambdaGuide.pdb
+/Users/yeongseonchoe/GitHub/aws-lambda-practical-guide/apps/dotnet/src/obj/Debug/net8.0/LambdaGuide.genruntimeconfig.cache
+/Users/yeongseonchoe/GitHub/aws-lambda-practical-guide/apps/dotnet/src/obj/Debug/net8.0/ref/LambdaGuide.dll

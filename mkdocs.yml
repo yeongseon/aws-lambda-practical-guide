@@ -1,0 +1,306 @@
+site_name: AWS Lambda Practical Guide
+site_url: https://yeongseon.github.io/aws-lambda-practical-guide/
+site_description: Comprehensive guide for building, deploying, and operating serverless applications on AWS Lambda
+site_author: yeongseon
+
+repo_name: yeongseon/aws-lambda-practical-guide
+repo_url: https://github.com/yeongseon/aws-lambda-practical-guide
+
+theme:
+  name: material
+  language: en
+  favicon: assets/images/favicon.svg
+  logo: assets/images/favicon.svg
+  palette:
+    - scheme: default
+      primary: deep orange
+      accent: orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: deep orange
+      accent: orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+  icon:
+    repo: fontawesome/brands/github
+  custom_dir: docs
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/mermaid-zoom.js
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.mark
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - tables
+  - toc:
+      permalink: true
+
+validation:
+  nav:
+    omitted_files: warn
+  links:
+    not_found: warn
+    anchors: warn
+    absolute_links: warn
+    unrecognized_links: warn
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/yeongseon/aws-lambda-practical-guide
+
+nav:
+  - Home: index.md
+  - Start Here:
+    - start-here/overview.md
+    - start-here/learning-paths.md
+    - start-here/repository-map.md
+  - Platform:
+    - platform/index.md
+    - platform/how-lambda-works.md
+    - platform/execution-model.md
+    - platform/event-sources.md
+    - platform/concurrency-and-scaling.md
+    - platform/networking.md
+    - platform/layers-and-extensions.md
+    - platform/resource-relationships.md
+    - platform/security-model.md
+  - Best Practices:
+    - best-practices/index.md
+    - best-practices/production-baseline.md
+    - best-practices/networking.md
+    - best-practices/security.md
+    - best-practices/deployment.md
+    - best-practices/performance.md
+    - best-practices/reliability.md
+    - best-practices/common-anti-patterns.md
+  - Language Guides:
+    - language-guides/index.md
+    - Python:
+      - language-guides/python/index.md
+      - language-guides/python/01-local-run.md
+      - language-guides/python/02-first-deploy.md
+      - language-guides/python/03-configuration.md
+      - language-guides/python/04-logging-monitoring.md
+      - language-guides/python/05-infrastructure-as-code.md
+      - language-guides/python/06-ci-cd.md
+      - language-guides/python/07-custom-domain-ssl.md
+      - language-guides/python/python-runtime.md
+      - Python Recipes:
+        - language-guides/python/recipes/index.md
+        - language-guides/python/recipes/api-gateway-rest.md
+        - language-guides/python/recipes/api-gateway-http.md
+        - language-guides/python/recipes/dynamodb-streams.md
+        - language-guides/python/recipes/s3-event.md
+        - language-guides/python/recipes/sqs-trigger.md
+        - language-guides/python/recipes/sns-trigger.md
+        - language-guides/python/recipes/eventbridge-rule.md
+        - language-guides/python/recipes/step-functions.md
+        - language-guides/python/recipes/secrets-manager.md
+        - language-guides/python/recipes/parameter-store.md
+        - language-guides/python/recipes/rds-proxy.md
+        - language-guides/python/recipes/layers.md
+        - language-guides/python/recipes/custom-metrics.md
+        - language-guides/python/recipes/docker-image.md
+    - Node.js:
+      - language-guides/nodejs/index.md
+      - language-guides/nodejs/01-local-run.md
+      - language-guides/nodejs/02-first-deploy.md
+      - language-guides/nodejs/03-configuration.md
+      - language-guides/nodejs/04-logging-monitoring.md
+      - language-guides/nodejs/05-infrastructure-as-code.md
+      - language-guides/nodejs/06-ci-cd.md
+      - language-guides/nodejs/07-custom-domain-ssl.md
+      - language-guides/nodejs/nodejs-runtime.md
+      - Node.js Recipes:
+        - language-guides/nodejs/recipes/index.md
+        - language-guides/nodejs/recipes/api-gateway-rest.md
+        - language-guides/nodejs/recipes/api-gateway-http.md
+        - language-guides/nodejs/recipes/dynamodb-streams.md
+        - language-guides/nodejs/recipes/s3-event.md
+        - language-guides/nodejs/recipes/sqs-trigger.md
+        - language-guides/nodejs/recipes/sns-trigger.md
+        - language-guides/nodejs/recipes/eventbridge-rule.md
+        - language-guides/nodejs/recipes/step-functions.md
+        - language-guides/nodejs/recipes/secrets-manager.md
+        - language-guides/nodejs/recipes/parameter-store.md
+        - language-guides/nodejs/recipes/rds-proxy.md
+        - language-guides/nodejs/recipes/layers.md
+        - language-guides/nodejs/recipes/custom-metrics.md
+        - language-guides/nodejs/recipes/docker-image.md
+    - Java:
+      - language-guides/java/index.md
+      - language-guides/java/01-local-run.md
+      - language-guides/java/02-first-deploy.md
+      - language-guides/java/03-configuration.md
+      - language-guides/java/04-logging-monitoring.md
+      - language-guides/java/05-infrastructure-as-code.md
+      - language-guides/java/06-ci-cd.md
+      - language-guides/java/07-custom-domain-ssl.md
+      - language-guides/java/java-runtime.md
+      - Java Recipes:
+        - language-guides/java/recipes/index.md
+        - language-guides/java/recipes/api-gateway-rest.md
+        - language-guides/java/recipes/dynamodb-streams.md
+        - language-guides/java/recipes/s3-event.md
+        - language-guides/java/recipes/sqs-trigger.md
+        - language-guides/java/recipes/sns-trigger.md
+        - language-guides/java/recipes/secrets-manager.md
+        - language-guides/java/recipes/rds-proxy.md
+        - language-guides/java/recipes/layers.md
+        - language-guides/java/recipes/custom-metrics.md
+        - language-guides/java/recipes/docker-image.md
+    - .NET:
+      - language-guides/dotnet/index.md
+      - language-guides/dotnet/01-local-run.md
+      - language-guides/dotnet/02-first-deploy.md
+      - language-guides/dotnet/03-configuration.md
+      - language-guides/dotnet/04-logging-monitoring.md
+      - language-guides/dotnet/05-infrastructure-as-code.md
+      - language-guides/dotnet/06-ci-cd.md
+      - language-guides/dotnet/07-custom-domain-ssl.md
+      - language-guides/dotnet/dotnet-runtime.md
+      - .NET Recipes:
+        - language-guides/dotnet/recipes/index.md
+        - language-guides/dotnet/recipes/api-gateway-rest.md
+        - language-guides/dotnet/recipes/dynamodb-streams.md
+        - language-guides/dotnet/recipes/s3-event.md
+        - language-guides/dotnet/recipes/sqs-trigger.md
+        - language-guides/dotnet/recipes/sns-trigger.md
+        - language-guides/dotnet/recipes/secrets-manager.md
+        - language-guides/dotnet/recipes/rds-proxy.md
+        - language-guides/dotnet/recipes/layers.md
+        - language-guides/dotnet/recipes/custom-metrics.md
+        - language-guides/dotnet/recipes/docker-image.md
+  - Operations:
+    - operations/index.md
+    - operations/deployment-strategies.md
+    - operations/versioning-and-aliases.md
+    - operations/provisioned-concurrency.md
+    - operations/monitoring.md
+    - operations/cost-optimization.md
+    - operations/environment-management.md
+    - operations/security-operations.md
+    - operations/updates-and-patching.md
+    - operations/event-source-management.md
+  - Troubleshooting:
+    - troubleshooting/index.md
+    - troubleshooting/architecture-overview.md
+    - troubleshooting/decision-tree.md
+    - troubleshooting/mental-model.md
+    - troubleshooting/evidence-map.md
+    - troubleshooting/quick-diagnosis-cards.md
+    - CloudWatch Query Library:
+      - troubleshooting/cloudwatch/index.md
+      - Invocation:
+        - troubleshooting/cloudwatch/invocation/index.md
+        - troubleshooting/cloudwatch/invocation/error-rate-over-time.md
+        - troubleshooting/cloudwatch/invocation/throttle-trend.md
+        - troubleshooting/cloudwatch/invocation/cold-start-duration.md
+        - troubleshooting/cloudwatch/invocation/invocation-count.md
+        - troubleshooting/cloudwatch/invocation/duration-percentiles.md
+      - Application:
+        - troubleshooting/cloudwatch/application/index.md
+        - troubleshooting/cloudwatch/application/timeout-errors.md
+        - troubleshooting/cloudwatch/application/runtime-exceptions.md
+        - troubleshooting/cloudwatch/application/startup-errors.md
+      - Platform:
+        - troubleshooting/cloudwatch/platform/index.md
+        - troubleshooting/cloudwatch/platform/deployment-events.md
+        - troubleshooting/cloudwatch/platform/memory-utilization.md
+        - troubleshooting/cloudwatch/platform/provisioned-concurrency.md
+      - Correlation:
+        - troubleshooting/cloudwatch/correlation/index.md
+        - troubleshooting/cloudwatch/correlation/deploy-vs-errors.md
+        - troubleshooting/cloudwatch/correlation/concurrency-vs-throttles.md
+    - First 10 Minutes:
+      - troubleshooting/first-10-minutes/index.md
+      - troubleshooting/first-10-minutes/invocation-errors.md
+      - troubleshooting/first-10-minutes/cold-start-spikes.md
+      - troubleshooting/first-10-minutes/timeout-failures.md
+      - troubleshooting/first-10-minutes/throttling-errors.md
+    - Playbooks:
+      - troubleshooting/playbooks/index.md
+      - Invocation Errors:
+        - troubleshooting/playbooks/invocation-errors/function-timeout.md
+        - troubleshooting/playbooks/invocation-errors/out-of-memory.md
+        - troubleshooting/playbooks/invocation-errors/permission-denied.md
+        - troubleshooting/playbooks/invocation-errors/deployment-failed.md
+        - troubleshooting/playbooks/invocation-errors/cold-start-latency.md
+        - troubleshooting/playbooks/invocation-errors/throttling.md
+        - troubleshooting/playbooks/invocation-errors/runtime-crash.md
+      - Performance:
+        - troubleshooting/playbooks/performance/high-duration.md
+        - troubleshooting/playbooks/performance/memory-exhaustion.md
+        - troubleshooting/playbooks/performance/cold-start-optimization.md
+        - troubleshooting/playbooks/performance/concurrency-limits.md
+        - troubleshooting/playbooks/performance/downstream-latency.md
+      - Networking:
+        - troubleshooting/playbooks/networking/vpc-connectivity.md
+        - troubleshooting/playbooks/networking/nat-gateway-issues.md
+        - troubleshooting/playbooks/networking/api-gateway-integration.md
+        - troubleshooting/playbooks/networking/rds-proxy-connectivity.md
+        - troubleshooting/playbooks/networking/endpoint-timeout.md
+    - Hands-on Labs:
+      - troubleshooting/lab-guides/index.md
+      - Invocation Errors:
+        - troubleshooting/lab-guides/function-timeout.md
+        - troubleshooting/lab-guides/out-of-memory.md
+        - troubleshooting/lab-guides/permission-denied.md
+        - troubleshooting/lab-guides/deployment-failed.md
+      - Performance:
+        - troubleshooting/lab-guides/cold-start-latency.md
+        - troubleshooting/lab-guides/high-duration.md
+        - troubleshooting/lab-guides/memory-exhaustion.md
+      - Networking:
+        - troubleshooting/lab-guides/vpc-connectivity.md
+        - troubleshooting/lab-guides/api-gateway-integration.md
+        - troubleshooting/lab-guides/nat-gateway-issues.md
+    - Methodology:
+      - troubleshooting/methodology/troubleshooting-method.md
+      - troubleshooting/methodology/log-sources-map.md
+  - Reference:
+    - reference/index.md
+    - reference/lambda-cli-cheatsheet.md
+    - reference/service-limits.md
+    - reference/environment-variables.md
+    - reference/troubleshooting.md
+    - reference/cloudwatch-queries.md
+    - reference/lambda-diagnostics.md

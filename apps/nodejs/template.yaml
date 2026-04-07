@@ -1,0 +1,27 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2024-10-16
+Description: Minimal Node.js Lambda reference app with API Gateway.
+
+Resources:
+  NodejsApiFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: .
+      Handler: index.handler
+      Runtime: nodejs22.x
+      Architectures:
+        - x86_64
+      MemorySize: 256
+      Timeout: 10
+      Events:
+        Api:
+          Type: HttpApi
+          Properties:
+            Path: /
+            Method: GET
+
+Outputs:
+  NodejsApiUrl:
+    Description: HTTP API endpoint URL
+    Value:
+      Fn::Sub: "https://${ServerlessHttpApi}.execute-api.${AWS::Region}.amazonaws.com/"

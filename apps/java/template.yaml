@@ -1,0 +1,27 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2024-10-16
+Description: Minimal Java Lambda reference app with API Gateway.
+
+Resources:
+  JavaApiFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: .
+      Handler: com.example.Handler::handleRequest
+      Runtime: java17
+      MemorySize: 512
+      Timeout: 10
+      Events:
+        Api:
+          Type: HttpApi
+          Properties:
+            Path: /
+            Method: GET
+    Metadata:
+      BuildMethod: maven
+
+Outputs:
+  JavaApiUrl:
+    Description: HTTP API endpoint URL
+    Value:
+      Fn::Sub: "https://${ServerlessHttpApi}.execute-api.${AWS::Region}.amazonaws.com/"

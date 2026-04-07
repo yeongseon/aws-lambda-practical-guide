@@ -1,0 +1,18 @@
+/* Mermaid diagram zoom support */
+.mermaid {
+  cursor: grab;
+}
+
+.mermaid:active {
+  cursor: grabbing;
+}
+
+/* Improve code block readability */
+.md-typeset code {
+  word-break: normal;
+}
+
+/* Custom admonition styling */
+.md-typeset .admonition {
+  margin-bottom: 1.5em;
+}

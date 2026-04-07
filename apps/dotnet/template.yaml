@@ -1,0 +1,27 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2024-10-16
+Description: Minimal .NET Lambda reference app with API Gateway.
+
+Resources:
+  DotnetApiFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: src/
+      Handler: LambdaGuide::LambdaGuide.Function::FunctionHandler
+      Runtime: dotnet8
+      MemorySize: 512
+      Timeout: 10
+      Events:
+        Api:
+          Type: HttpApi
+          Properties:
+            Path: /
+            Method: GET
+    Metadata:
+      BuildMethod: dotnet8
+
+Outputs:
+  DotnetApiUrl:
+    Description: HTTP API endpoint URL
+    Value:
+      Fn::Sub: "https://${ServerlessHttpApi}.execute-api.${AWS::Region}.amazonaws.com/"
